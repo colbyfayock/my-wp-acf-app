@@ -6,7 +6,7 @@ import { getApolloClient } from 'lib/apollo-client';
 
 import styles from '../../styles/Home.module.css'
 
-export default function Post({ post, site }) {
+export default function Post({ post, site, video }) {
   return (
     <div className={styles.container}>
       <Head>
@@ -19,6 +19,15 @@ export default function Post({ post, site }) {
         <h1 className={styles.title}>
           { post.title }
         </h1>
+
+        {video && (
+          <figure>
+            <div dangerouslySetInnerHTML={{
+              __html: video.oEmbed.html
+            }} />
+            <figcaption>From { video.videoSource }</figcaption>
+          </figure>
+        )}
 
         <div className={styles.grid}>
           <div className={styles.content} dangerouslySetInnerHTML={{
@@ -54,6 +63,10 @@ export async function getStaticProps({ params = {} } = {}) {
           content
           title
           slug
+          video {
+            videoSource
+            videoUrl
+          }
         }
       }
     `,
@@ -63,6 +76,14 @@ export async function getStaticProps({ params = {} } = {}) {
   });
 
   const post = data?.data.postBy;
+  let oEmbed;
+
+  if ( post.video ) {
+    if ( post.video.videoSource === 'YouTube') {
+      oEmbed = await fetch(`https://www.youtube.com/oembed?url=${post.video.videoUrl}`)
+      oEmbed = await oEmbed.json();
+    }
+  }
 
   const site = {
     ...data?.data.generalSettings
@@ -71,7 +92,11 @@ export async function getStaticProps({ params = {} } = {}) {
   return {
     props: {
       post,
-      site
+      site,
+      video: {
+        ...post.video,
+        oEmbed
+      }
     }
   }
 }

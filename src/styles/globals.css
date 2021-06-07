@@ -13,3 +13,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+figure {
+  width: 100%;
+  text-align: center;
+}
+
+figure iframe {
+  aspect-ratio: 200 / 113;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
