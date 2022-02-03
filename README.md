@@ -1,18 +1,12 @@
-# Next.js WordPress Starter
+# Managing Custom Fields with Headless WordPress Using ACF & WPGraphQL
 
-## ⚡️ Quick Start
+Demo for tutorial [How to Add Custom Fields in Headless WordPress with ACF & WPGraphQL](https://spacejelly.dev/posts/how-to-add-custom-fields-in-headless-wordpress-with-acf-wpgraphql/)
 
-### Requirements
-* [WordPress](https://wordpress.org/)
-* [WPGraphQL](https://www.wpgraphql.com/)
+📝 Article: https://spacejelly.dev/posts/how-to-add-custom-fields-in-headless-wordpress-with-acf-wpgraphql/
 
-```bash
-yarn create next-app -e https://github.com/colbyfayock/next-wpgraphql-basic-starter
-# or
-npx create-next-app -e https://github.com/colbyfayock/next-wpgraphql-basic-starter
-```
+📺 YouTube: https://www.youtube.com/watch?v=mMaw1LMClwQ
 
-Add an `.env.local` file to the root with the following:
-```
-WORDPRESS_GRAPHQL_ENDPOINT="http://yourhost.com/graphql"
-```
+## More tutorials and walkthroughs
+* [Follow me on Twitter](https://twitter.com/colbyfayock)
+* [Subscribe on YouTube](https://www.youtube.com/colbyfayock)
+* [Sign Up for My Newsletter](https://colbyfayock.com/newsletter)
