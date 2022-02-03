@@ -1,6 +1,6 @@
 # Managing Custom Fields with Headless WordPress Using ACF & WPGraphQL
 
-Demo for tutorial [How to Add Custom Fields in Headless WordPress with ACF & WPGraphQL](https://spacejelly.dev/posts/how-to-add-custom-fields-in-headless-wordpress-with-acf-wpgraphql/)
+Demo for tutorial [How to Add Custom Fields in Headless WordPress with ACF & WPGraphQL](https://www.youtube.com/watch?v=mMaw1LMClwQ)
 
 📝 Article: https://spacejelly.dev/posts/how-to-add-custom-fields-in-headless-wordpress-with-acf-wpgraphql/
 
